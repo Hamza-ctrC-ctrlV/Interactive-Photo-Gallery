@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #image {
+            width: 1200px;
+            height: 600px;
+            border: 2px solid black;
+            margin: 20px auto;
+            background-color: lightgray;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            font-size: 28px;
+            line-height: 600px;
+        }
+
+        .preview {
+            width: 300px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Photo Gallery</h1>
+
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
+
+    <img class="preview"
+         src="images/bmw_s1000rr.jpg"
+         alt="BMW S1000RR on a racetrack"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()">
+
+    <img class="preview"
+         src="images/yamaha_r1.jpg"
+         alt="Yamaha R1"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()">
+
+</body>
+</html>
