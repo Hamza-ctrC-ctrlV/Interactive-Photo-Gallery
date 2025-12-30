@@ -2,37 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Photo Gallery</title>
-
     <script src="script.js" defer></script>
 
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #f0f0f0;
         }
 
         #image {
-            width: 1200px;
-            height: 600px;
-            border: 2px solid black;
+            width: 1280px;
+            height: 720px;
+            border: 5px solid black;
             margin: 20px auto;
             background-color: lightgray;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;
-            font-size: 28px;
-            line-height: 600px;
+            background-size: cover;
+            color: #FFFFFF;
+            font-size: 150%;
+            line-height: 1250px;
+            text-shadow: 2px 2px 4px #000000;
         }
 
         .preview {
-            width: 300px;
+            width: 200px;   
             margin: 10px;
+            border: 2px solid transparent; 
+        }
+
+        .preview:focus {
+            border: 2px solid blue;
+            outline: none;
         }
     </style>
 </head>
 
-<body>
+<body onload="addTabFocus()">
 
     <h1>Interactive Photo Gallery</h1>
 
@@ -44,13 +53,49 @@
          src="images/bmw_s1000rr.jpg"
          alt="BMW S1000RR on a racetrack"
          onmouseover="upDate(this)"
-         onmouseleave="undo()">
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
 
     <img class="preview"
          src="images/yamaha_r1.jpg"
          alt="Yamaha R1"
          onmouseover="upDate(this)"
-         onmouseleave="undo()">
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
+
+    <img class="preview"
+         src="images/aprilia_rsv4.jpg"
+         alt="Aprilia RSV4"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
+
+    <img class="preview"
+         src="images/ducati_v4.jpeg"
+         alt="Ducati panigal V4"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
+
+    <img class="preview"
+         src="images/kawasaki_zx10rr.jpg"
+         alt="Kawasaki ZX10RR"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
+
+    <img class="preview"
+         src="images/honda_africa twin.jpg"
+         alt="Honda Africa Twin"
+         onmouseover="upDate(this)"
+         onmouseleave="undo()"
+         onfocus="upDate(this)"
+         onblur="undo()">
 
 </body>
 </html>
